@@ -1,0 +1,25 @@
+{
+  "name": "matchy-matchy-same-same-heroku-app",
+  "version": "1.0.0",
+  "description": "Back-end to handle leaderboard on Heroku (Free)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrKacz/matchy-matchy-same-same-heroku-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrKacz/matchy-matchy-same-same-heroku-app/issues"
+  },
+  "homepage": "https://github.com/AdrKacz/matchy-matchy-same-same-heroku-app#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0"
+  }
+}
