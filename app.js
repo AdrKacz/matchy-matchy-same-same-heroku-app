@@ -6,6 +6,8 @@ const dbPassword = process.env.DB_PASSWORD;
 //Set up app
 const express = require('express');
 const cors = require('cors');
+const compression = require('compression');
+const helmet = require('helmet');
 const app = express();
 const port = 3000;
 
@@ -15,6 +17,8 @@ const uri = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.eujj8.mongodb.net/my
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Set up middlewares
+app.use(helmet());
+app.use(compression());
 app.use(cors());
 app.use(express.json());
 
