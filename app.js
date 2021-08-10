@@ -28,7 +28,7 @@ app.use(cors());
 app.use(express.json());
 
 //Set up routing
-app.put('/insert', async (req, res) => {
+app.post('/insert', async (req, res) => {
   const resObject = {};
   try {
     // TODO: Verify score
