@@ -9,7 +9,9 @@ const cors = require('cors');
 const compression = require('compression');
 const helmet = require('helmet');
 const app = express();
-const port = 3000;
+
+const devPort = 3000;
+const port = process.env.PORT || devPort;
 
 //Set up mongoose connection
 const { MongoClient } = require('mongodb');
