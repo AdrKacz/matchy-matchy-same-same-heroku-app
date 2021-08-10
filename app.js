@@ -13,7 +13,10 @@ const port = 3000;
 
 //Set up mongoose connection
 const { MongoClient } = require('mongodb');
-const uri = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.eujj8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+
+const devUri = `mongodb+srv://${dbUser}:${dbPassword}@cluster0.eujj8.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const uri = process.env.MONGODB_URI || devUri;
+
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Set up middlewares

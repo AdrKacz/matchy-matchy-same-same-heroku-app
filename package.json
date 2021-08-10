@@ -1,6 +1,9 @@
 {
   "name": "matchy-matchy-same-same-heroku-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.19.0"
+  },
   "description": "Back-end to handle leaderboard on Heroku (Free)",
   "main": "index.js",
   "scripts": {
